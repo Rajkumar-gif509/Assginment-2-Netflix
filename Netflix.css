@@ -1,0 +1,357 @@
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+body {
+    background: #000;
+    color: #fff;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+ul {
+    list-style: none;
+}
+
+
+.site-header {
+    position: absolute;
+    top: 0;
+    width: 100%;
+    z-index: 10;
+}
+
+.header-inner {
+    max-width: 1200px;
+    margin: auto;
+    padding: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo-wrap img {
+    width: 180px;
+    height: auto;
+}
+
+.header-actions {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.header-actions select,
+.footer-lang select {
+    background: transparent;
+    color: #fff;
+    border: 1px solid #aaa;
+    padding: 6px 10px;
+    border-radius: 4px;
+}
+
+.sign-in-btn {
+    background: #e50914;
+    padding: 7px 15px;
+    border-radius: 4px;
+    font-weight: bold;
+}
+
+
+.hero-section {
+    min-height: 100vh;
+    background:
+        linear-gradient(rgba(0,0,0,.7), rgba(0,0,0,.7)),
+        url("./assets/netflix01.jpg")
+        center / cover no-repeat;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 250px 20px 10px;
+}
+
+.hero-text-wrap h1 {
+    font-size: 3rem;
+    font-weight: 900;
+    max-width: 600px;
+}
+
+.hero-text-wrap h1 span {
+    display: block;
+    margin-top: 10px;
+    font-size: 1.2rem;
+    font-weight: 600;
+}
+
+.hero-text-wrap p {
+    margin: 40px 0 20px;
+    font-size: 0.9rem;
+}
+
+.hero-form,
+.subscription-form {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    justify-content: center;
+}
+
+.hero-form input,
+.subscription-form input {
+    width: 500px;
+    height: 70px;
+    padding: 15px;
+    font-size: 1rem;
+    border-radius: 4px;
+    border: 0.5px solid #575757;
+    background: rgba(0,0,0,.5);
+    color: #fff;
+}
+
+.hero-form input::placeholder,
+.subscription-form input::placeholder {
+    color: #575757;
+}
+
+.hero-form button,
+.subscription-form button {
+    padding: 15px 25px;
+    background: #e50914;
+    color: #fff;
+    border: none;
+    font-size: 1.1rem;
+    font-weight: bold;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+
+.section {
+    max-width: 1200px;
+    margin: auto;
+    padding: 60px 20px;
+}
+
+.section h2 {
+    font-size: 2rem;
+    margin-bottom: 20px;
+}
+
+
+.trending-section h2 {
+    font-size: 1.8rem;
+    font-weight: 600;
+    margin-bottom: 15px;
+}
+
+.trending-list {
+    display: flex;
+    justify-content: space-evenly;
+    gap: 15px;
+    flex-wrap: wrap;
+}
+
+.trending-list li {
+    flex: 0 0 auto;
+}
+
+.trending-list button {
+    background: none;
+    border: none;
+    position: relative;
+    cursor: pointer;
+    transition: transform .3s ease;
+}
+
+.trending-list button:hover {
+    transform: scale(1.05);
+}
+
+.trending-list button img {
+    width: 225px;
+    height: 315px;
+    border-radius: 10px;
+    object-fit: cover;
+}
+
+.trending-list button span {
+    position: absolute;
+    left: -30px;
+    bottom: -30px;
+    font-size: 7rem;
+    font-weight: 900;
+    color: #000;
+    -webkit-text-stroke: 2px #e1dfdf;
+    pointer-events: none;
+}
+
+
+.reasons-section ul {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(260px,1fr));
+    gap: 20px;
+}
+
+.reason-card {
+    min-height: 350px;
+    border-radius: 20px;
+    padding: 28px;
+    background: linear-gradient(180deg,#1a2143 0%,#14163a 40%,#0b0b0b 100%);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    position: relative;
+}
+
+.reason-card .text h3 {
+    font-size: 1.4rem;
+    margin-bottom: 10px;
+}
+
+.reason-card .text p {
+    font-size: 1rem;
+    color: #ccc;
+}
+
+.reason-card img {
+    width: 100px;
+    position: absolute;
+    bottom: 15px;
+    right: 10px;
+}
+
+
+.faq-section {
+    padding: 50px 20px;
+}
+
+.faq-section h2 {
+    text-align: center;
+    font-size: 2.5rem;
+    margin-bottom: 30px;
+}
+
+.faq-list {
+    max-width: 1150px;
+    margin: auto;
+}
+
+.faq-item {
+    background: #303030;
+    margin-bottom: 10px;
+}
+
+.faq-item summary {
+    padding: 24px;
+    font-size: 1.4rem;
+    display: flex;
+    justify-content: space-between;
+    cursor: pointer;
+}
+
+.faq-item summary:hover {
+    background: #414141;
+}
+
+.faq-item summary::after {
+    content: "+";
+    font-size: 2.5rem;
+}
+
+.faq-item[open] summary::after {
+    content: "×";
+}
+
+.faq-item p {
+    padding: 24px;
+    border-top: 1px solid #000;
+}
+
+
+.subscription-section {
+    text-align: center;
+}
+
+
+.site-footer {
+    background: #000;
+    color: #b3b3b3;
+    padding: 60px 20px;
+    font-size: .95rem;
+}
+
+.footer-contact,
+.footer-links,
+.footer-lang,
+.footer-country,
+.footer-note {
+    max-width: 1000px;
+    margin: auto;
+}
+
+.footer-contact {
+    margin-bottom: 30px;
+}
+
+.footer-contact a,
+.footer-links a {
+    color: #b3b3b3;
+    text-decoration: underline;
+}
+
+.footer-links {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px,1fr));
+    gap: 20px;
+    margin-bottom: 30px;
+}
+
+.footer-links li {
+    margin-bottom: 14px;
+}
+
+.footer-lang {
+    margin: 30px auto;
+}
+
+.footer-country {
+    margin-top: 20px;
+}
+
+.footer-note {
+    margin-top: 20px;
+    font-size: .85rem;
+}
+
+.footer-note a {
+    color: #0071eb;
+}
+
+
+@media (max-width: 768px) {
+    .hero-text-wrap h1 {
+        font-size: 2rem;
+    }
+
+    .hero-form input,
+    .subscription-form input {
+        width: 100%;
+    }
+
+    .reason-card {
+        flex-direction: column;
+    }
+
+    .trending-list {
+        justify-content: center;
+    }
+}
